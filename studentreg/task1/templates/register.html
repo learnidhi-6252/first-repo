@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .register-box {
+            background: white;
+            padding: 40px;
+            width: 320px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            text-align: left;
+        }
+
+        .register-box h2 {
+            margin-bottom: 20px;
+        }
+
+        .register-box input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .register-box input:focus {
+            border-color: #e26fa5;
+        }
+
+        .register-box button {
+            width: 100%;
+            padding: 10px;
+            background: #0d99a0;
+            border: none;
+            border-radius: 5px;
+            color: rgb(230, 235, 236);
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .register-box button:hover {
+            background: #009ec3;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+</head>
+<body>
+    <div class="register-box">
+    <form method="post">
+        {% csrf_token %}
+
+        Name:<input type="text" name="name"><br><br>
+
+        Password:<input type="text" name="password"><br><br>
+        
+        Email:<input type="email" name="email"><br><br>
+
+        <button type="submit">Submit</button><br><br>
+    </form>
+    </div>
+</body>
+</html>

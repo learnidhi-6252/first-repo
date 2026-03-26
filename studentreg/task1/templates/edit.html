@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update Information</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            width: 350px;
+            margin: 30px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .back-link a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+     <h2>Update Information</h2>
+
+<form method="POST" action="{% url 'updateinfo' %}">
+    {% csrf_token %}
+    <input type="hidden" name="id" value="{{ informations.id }}">
+
+    <label>Name:</label>
+    <input type="text" name="name" value="{{ informations.name }}" required>
+
+    <label>Password:</label>
+    <input type="text" name="password" value="{{ informations.password }}" required>
+
+
+    <label>Email:</label>
+    <input type="email" name="email" value="{{ informations.email }}" required>
+
+    <button type="submit">Update</button>
+</form>
+
+<a href="{% url 'regview' %}">Back to All Records</a>
+</body>
+</html>

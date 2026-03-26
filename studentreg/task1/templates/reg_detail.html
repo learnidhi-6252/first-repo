@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #f3d3f3;
+            margin: 20px;
+        }
+
+     h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+    p {
+            width: 25%;
+            margin: 0 auto 20px auto;  
+            padding: 8px;
+            background-color: rgb(247, 30, 218);
+            color: white;
+            border: none;
+    }
+
+    a[href*="regview"] {
+            text-align: center;
+    }
+    
+
+</style>
+
+</head>
+<body>
+    <h2>Student Details</h2>
+
+<p><strong>ID:</strong> {{ data.id }}</p>
+<p><strong>Name:</strong> {{ data.name }}</p>
+<p><strong>Email:</strong> {{ data.email }}</p>
+
+<a href="/regview">Back</a>
+</body>
+</html>

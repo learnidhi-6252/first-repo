@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     body{
+        font-family: Arial;
+        background-color: lightgray;
+    }
+    .content {
+    display: flex;
+    justify-content: center;   
+    align-items: center;      
+    height: 100vh;            
+    text-align: center;
+    background: linear-gradient(to right, #b7d2e9, #00f2fe);
+}
+
+.content h1 {
+    color: white;
+    font-size: 40px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 22px;
+    max-width: 600px;
+    word-wrap: break-word;
+    word-spacing: 10px;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #627b83;
+    padding: 15px 30px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00f2fe;
+}
+
+.login-box a {
+    text-decoration: none;
+    color: white;
+    background: #00f2fe;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.login-box a:hover {
+    background: #009ec3;
+}
+</style>
+<body>
+   <nav class="navbar">
+    <div class="left">
+        <div class="logo">StudentReg</div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">View</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="login-box">
+        <a href="login">Login</a>
+    </div>
+</nav>
+      <div class="content ">
+        <h1>WELCOME TO STUDENT REGISTRATION FORM</h1>
+      </div>
+</body>
+</html>

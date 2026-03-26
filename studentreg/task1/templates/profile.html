@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+ body{
+        font-family: Arial;
+        background-color: lightgray;
+    }
+    .box{
+        width:300px;
+        background-color: white;
+        padding: 20px;
+        margin:100px auto;
+        border:1px solid gray;
+    }
+    h2{
+        width: 100%;
+        padding: 8px;
+        margin-top:5px;
+        margin-bottom: 15px;
+        color: brown;
+    }
+    p{
+        width: 25%;
+        padding: 8px;
+        background-color: teal;
+        color: white;
+        border:none;
+    }
+</style>
+<body>
+    <h2>Profile Page</h2>
+
+<p><strong>Username:</strong> {{ user.username }}</p>
+<p><strong>Email:</strong> {{ user.email }}</p>
+
+<a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>
